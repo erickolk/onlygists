@@ -1,22 +1,22 @@
-import { useServices } from "~/composables/useServices/useServices"
+import { useServices } from '~/composables/useServices/useServices'
 
 export function useSession() {
-    const user = useSupabaseUser()
-    const services = useServices()
+  const user = useSupabaseUser()
+  const services = useServices()
 
-    const isLogged = () => {
-        const hasUserLogged = Boolean(user.value)
-        return hasUserLogged
-    }
+  const isLogged = () => {
+    const hasUserLogged = Boolean(user.value)
+    return hasUserLogged
+  }
 
-    const logout = async () => {
-        const response = await services.auth.signOut()
-        return response
-    }
+  const logout = async () => {
+    const response = await services.auth.signOut()
+    return response
+  }
 
-    return {
-        user,
-        logout,
-        isLogged
-    }
+  return {
+    user,
+    logout,
+    isLogged,
+  }
 }
