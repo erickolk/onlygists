@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   css: ['primeicons/primeicons.css'],
 
   imports: {
-    dirs: ['./composables/useSevices']
+    dirs: ['./composables/useSevices', './composables/useLogger']
   },
 
   supabase:{

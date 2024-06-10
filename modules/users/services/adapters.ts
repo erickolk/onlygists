@@ -1,6 +1,6 @@
 import type { User } from '@/modules/users/entities/User/User'
 import type { Database } from '@/libs/supabse/schema'
-import Address from '@/modules/users/entities/Address/Address'
+import type { Address } from '@/modules/users/entities/Address/Address'
 
 type ProfileTable = Database['public']['Tables']['profiles']
 type Row = ProfileTable['Row']
