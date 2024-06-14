@@ -1,10 +1,12 @@
 <script setup>
 import Header from '~/modules/auth/components/Header/Header.vue';
 import { useSession } from '@/modules/auth/composables/useSession/useSession'
+import { useMySelf } from '@/modules/users/composables/useMySelf/useMySelf'
 
 const session = useSession();
-
 const router = useRouter()
+const { loading, user } = useMySelf()
+console.log('user', user)
 
 const handleLogout = async () => {
     const { error } = await session.logout()

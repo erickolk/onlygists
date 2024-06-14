@@ -2,6 +2,8 @@ import type { User } from '@/modules/users/entities/User/User'
 import { useSession } from '~/modules/auth/composables/useSession/useSession'
 
 
+
+
 export function useMySelf() {
     const { logAndTrack } = useLogger()
     const services = useServices()
