@@ -1,5 +1,4 @@
 <template>
-
     <div class="h-full w-full flex flex-col">
         <slot class="flex-1" name="header"/>
         <div class="bg-gray-50 w-full h-max flex-1 ">
